@@ -1,0 +1,380 @@
+body {
+    background-color: #050505;
+    font-family: 'Poppins';
+    
+    
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-family: 'Courier New';
+}
+
+/* Container full screen */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000; /* latar hitam */
+  color: #00ff00;   /* warna hijau ala komputer */
+  font-family: 'Fira Code', monospace;
+  text-align: center;
+}
+
+/* Teks animasi */
+.loading-text {
+  font-size: 6vw; /* responsif sesuai lebar layar */
+  white-space: normal;
+  overflow: hidden;
+  border-right: 2px solid #00ff00; /* efek cursor */
+  animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+}
+
+/* Efek mengetik */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Cursor berkedip */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #00ff00 }
+}
+
+/* Media query biar pas di HP */
+@media (max-width: 768px) {
+  .loading-text {
+    font-size: 8vw; /* lebih besar di layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-text {
+    font-size: 10vw;
+  }
+}
+
+
+
+/* Hero Section Animasi */
+.hero-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+.hero-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Akhir Hero Section Animasi */
+
+/* About Me Section Animasi */
+.aboutme-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+.aboutme-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Akhir About Me Section Animasi */
+
+/* Projects Section Animasi */
+.projects-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+.projects-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Akhir Projects Section Animasi */
+
+/* Contact Section Animasi */
+.contact-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.contact-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Akhir Contact Section Animasi */
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* Tambahkan jarak agar konten tidak tertutup navbar */
+html {
+  scroll-padding-top: 80px;  /* tinggi navbar, sesuaikan jika berbeda */
+  scroll-behavior: smooth;   /* scroll halus saat klik link */
+   height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section umum */
+
+
+/* About Me */
+#aboutme {
+  padding-top: 80px; /* offset agar pas di bawah navbar */
+}
+
+/* Projects */
+#projects {
+  padding-top: 80px;
+}
+
+/* Contact Me */
+#contactme {
+  padding-top: 80px;
+}
+
+/* Responsive adjustment untuk mobile */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 60px; /* navbar lebih kecil di mobile */
+  }
+  section {
+    padding-top: 50px;
+    margin-bottom: 40px;
+  }
+}
+
+
+.offcanvas {
+    height: max-content;
+    
+
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.25rem;   /* default 0.25rem → bisa dikurangi */
+  font-size: 0.8rem;          /* ukuran ikon toggle */
+  width: 40px;                /* lebar tombol */
+  height: 35px;               /* tinggi tombol */
+}
+
+.navbar-toggler-icon {
+  background-size: 20px 20px; /* ukuran icon hamburger */
+}
+
+.nav-item {
+  display: flex;           /* jadikan fleksibel */
+  align-items: center;     /* vertikal sejajar */
+  gap: 8px;                /* jarak antara ikon dan teks */
+}
+
+.nav-item img {
+  width: 20px;             /* ukuran ikon */
+  height: 20px;
+}
+/* Akhir Navbar */
+
+/* Hero */
+.hero-section {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;      /* isi penuh layar */
+  background-position: center; /* fokus tengah */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;               /* full tinggi layar */
+  display: flex;
+  align-items: center;         /* vertikal tengah */
+  justify-content: center;     /* horizontal tengah */
+  text-align: center;
+  margin: 0;
+  padding-top: 70px;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px; /* ruang buat bayangan muncul */
+}
+
+.profile-img {
+  width: 150px;                /* ukuran default */
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #050505;
+  object-fit: cover;
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsif: kecilkan foto di HP */
+@media (max-width: 576px) {
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+/* Akhir Hero Section */
+
+/* About Me */
+.aboutme-section {
+  background-color: #000000; /* warna abu-abu soft */
+  width: 100%;
+  border-radius: 8px; /* opsional biar lebih halus */
+}
+
+.aboutme-section h2 {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.aboutme-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgb(255, 255, 255);
+}
+
+.skill {
+    color: rgb(255, 255, 255);
+    padding-bottom: 40px;
+}
+
+.aboutme-img {
+  width: 200px;                /* ukuran default */
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  object-fit: cover;
+   box-shadow: 0 10px 10px rgb(255, 255, 255);
+}
+
+/* Responsif: kecilkan foto di HP */
+@media (max-width: 576px) {
+  .aboutme-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Akhir About Me */
+
+/* Projects */
+#projects {
+    background-color: #ffffff;
+ padding: 20px;   /* beri jarak isi dengan border */
+  border-radius: 8px; /* opsional biar lebih halus */
+}
+
+.row {
+  padding-bottom: 20px;
+}
+
+.card-body, .card {
+border: 1px solid black;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: zoomIn 0.3s ease;
+}
+ .h2 {
+    color: rgb(9, 9, 9);
+ }
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Akhir Projects */
+
+/* Contact */
+.contact-section {
+  background-color: #000000;
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+
+.contact-section a {
+  color: #060606;
+}
+
+.contact-section a:hover {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.contact-form {
+    border: 1px solid #ffffff;
+    
+}
+
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #0e0d0d;
+  
+}
+
+.social-icons a:hover {
+  color: #0d6efd;
+}
+/* Akhir Contact */
+
+
+.footer-section .row {
+  display: flex;
+  justify-content: center; /* posisi horizontal tengah */
+  align-items: center;     /* posisi vertikal tengah */
+  
+}
+
+.footer-section .col-md-4 .mb-0 {
+  padding-top: 20px;
+}
