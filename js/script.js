@@ -35,7 +35,7 @@ function typeEffect() {
   } else {
     // setelah selesai, tunggu sebentar lalu pindah ke portfolio.html
     setTimeout(() => {
-      window.location.href = "home.html";
+      window.location.href = "html/home.html";
     }, 1000);
   }
 }
