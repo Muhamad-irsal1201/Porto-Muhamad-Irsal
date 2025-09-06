@@ -384,6 +384,7 @@ border: 1px solid black;
   display: flex;
   justify-content: center; /* center horizontal */
   align-items: center;     /* center vertical */
+  padding-top: 20px;
 }
 
 /* Responsive tipis: teks tetap center di HP */
