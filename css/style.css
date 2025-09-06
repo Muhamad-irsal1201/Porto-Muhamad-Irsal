@@ -1,8 +1,10 @@
 body {
     background-color: #050505;
     font-family: 'Poppins';
-    
-    
+     height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content {
