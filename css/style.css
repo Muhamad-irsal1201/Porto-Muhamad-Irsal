@@ -5,6 +5,11 @@ body {
     
 }
 
+.main-content {
+  flex: 1; /* membuat konten menyesuaikan tinggi layar */
+}
+
+
 #preloader {
   position: fixed;
   top: 0;
@@ -65,8 +70,6 @@ body {
     font-size: 10vw;
   }
 }
-
-
 
 /* Hero Section Animasi */
 .hero-section {
@@ -368,13 +371,23 @@ border: 1px solid black;
 /* Akhir Contact */
 
 
-.footer-section .row {
-  display: flex;
-  justify-content: center; /* posisi horizontal tengah */
-  align-items: center;     /* posisi vertikal tengah */
-  
+.footer-section {
+  background-color: #fff;
+  color: #000;
+  padding: 15px 0;
 }
 
-.footer-section .col-md-4 .mb-0 {
-  padding-top: 20px;
+/* Mengatur teks footer */
+.footer-section .row {
+  display: flex;
+  justify-content: center; /* center horizontal */
+  align-items: center;     /* center vertical */
+}
+
+/* Responsive tipis: teks tetap center di HP */
+@media (max-width: 767px) {
+  .footer-section .row {
+    justify-content: center;
+    text-align: center;
+  }
 }
