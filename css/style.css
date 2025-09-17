@@ -133,6 +133,8 @@ body {
   left: 0;
   width: 100%;
   z-index: 999;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  
 }
 
 /* Tambahkan jarak agar konten tidak tertutup navbar */
