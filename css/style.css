@@ -441,21 +441,26 @@ color: #ffffff;
 
 /* Tombol scroll to top */
 #scrollTopBtn {
-  display: none; /* default tidak muncul */
+  display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 20px; /* cukup rendah karena akan hilang kalau footer kelihatan */
   right: 20px;
-  z-index: 99;
-  font-size: 20px;
+  z-index: 999;
   border: none;
   outline: none;
   background-color: #333;
-  color: white;
   cursor: pointer;
-  padding: 12px 16px;
+  padding: 10px;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
 }
 
 #scrollTopBtn:hover {
@@ -463,12 +468,17 @@ color: #ffffff;
   transform: scale(1.1);
 }
 
+/* Responsif untuk HP/tablet */
 @media (max-width: 768px) {
   #scrollTopBtn {
-    font-size: 16px;
-    padding: 10px 12px;
-    bottom: 15px;
     right: 15px;
+    padding: 8px;
+  }
+
+  #scrollTopBtn img {
+    width: 16px;
+    height: 16px;
   }
 }
+
 

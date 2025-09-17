@@ -46,14 +46,27 @@ window.onload = typeEffect;
 
 
 // tampilkan tombol jika scroll lebih dari 200px
+const scrollBtn = document.getElementById("scrollTopBtn");
+const footer = document.querySelector("footer");
+
+// tombol muncul saat scroll >200px
 window.onscroll = function() {
-  const btn = document.getElementById("scrollTopBtn");
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    btn.style.display = "block";
+    scrollBtn.style.display = "block";
   } else {
-    btn.style.display = "none";
+    scrollBtn.style.display = "none";
   }
 };
+
+// auto sembunyikan tombol jika footer kelihatan
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      scrollBtn.style.display = "none";
+    }
+  });
+});
+observer.observe(footer);
 
 // fungsi scroll halus ke atas
 function scrollToTop() {
