@@ -1,7 +1,10 @@
 body {
-    background-color: #050505;
-    font-family: 'Poppins';
-     height: 100%;
+   background-image: url('../img/Bb.jpg'); /* panggil gambar di folder img */
+  background-size: cover;              /* supaya penuh layar */
+  background-position: center;         /* posisi tengah */
+  background-repeat: no-repeat;        /* jangan diulang */
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
