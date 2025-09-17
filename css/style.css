@@ -419,22 +419,32 @@ color: #ffffff;
 .footer-section {
   background-color: #fff;
   color: #000;
-  padding: 10px 0;         /* kurangi padding biar tidak terlalu tinggi */
-  margin-top: auto;        /* dorong ke bawah */
+  padding: 20px 0;     /* cukup tinggi agar lega */
+  margin-top: auto;    /* selalu di bawah */
+  text-align: center;  /* teks center default */
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2); /* biar menonjol */
 }
 
-/* Baris dalam footer */
-.footer-section .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;              /* hapus padding ekstra */
+.footer-text {
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-/* Responsive di HP */
-@media (max-width: 767px) {
-  .footer-section .row {
-    justify-content: center;
-    text-align: center;
+/* 📱 Responsive: atur ukuran teks & padding */
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 14px;
+  }
+  .footer-section {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-text {
+    font-size: 13px;
+  }
+  .footer-section {
+    padding: 12px 0;
   }
 }
