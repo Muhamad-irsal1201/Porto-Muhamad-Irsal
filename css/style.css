@@ -132,9 +132,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
-  shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-  
+  z-index: 999; 
 }
 
 /* Tambahkan jarak agar konten tidak tertutup navbar */
@@ -220,7 +218,8 @@ html {
   text-align: center;
   margin: 0;
   padding-top: 70px;
- box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+ box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3),
+             0 -8px 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px; /* ruang buat bayangan muncul */
   border-radius: 8px;
   border: 0.5px solid rgb(0, 0, 0);
@@ -258,7 +257,8 @@ html {
   width: 100%;
   border-radius: 8px; /* opsional biar lebih halus */
     border: 0.5px solid rgb(0, 0, 0);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3),
+             0 -8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .aboutme-section h2 {
@@ -283,7 +283,7 @@ html {
   border-radius: 50%;
   border: 4px solid #ffffff;
   object-fit: cover;
-   box-shadow: 0 10px 10px rgb(255, 255, 255);
+   box-shadow: 0 10px 10px rgb(0, 0, 0);
 }
 
 /* Responsif: kecilkan foto di HP */
@@ -311,7 +311,8 @@ html {
  padding: 20px;   /* beri jarak isi dengan border */
   border-radius: 8px; /* opsional biar lebih halus */
     border: 0.5px solid rgb(0, 0, 0);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3),
+             0 -8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .row {
@@ -350,7 +351,8 @@ border: 1px solid black;
   padding: 60px 20px;
   border-radius: 8px;
     border: 0.5px solid rgb(0, 0, 0);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3),
+             0 -8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-section a {
