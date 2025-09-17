@@ -218,8 +218,9 @@ html {
   text-align: center;
   margin: 0;
   padding-top: 70px;
- box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3),
-             0 -8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+              0 20px 30px 5px rgba(0, 0, 0, 0.7),   /* bawah */
+              0 -20px 30px 5px rgba(0, 0, 0, 0.7);  /* atas */
   margin-bottom: 10px; /* ruang buat bayangan muncul */
   border-radius: 8px;
   border: 0.5px solid rgb(0, 0, 0);
@@ -257,8 +258,9 @@ html {
   width: 100%;
   border-radius: 8px; /* opsional biar lebih halus */
     border: 0.5px solid rgb(0, 0, 0);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3),
-             0 -8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+              0 20px 30px 5px rgba(0, 0, 0, 0.7),   /* bawah */
+              0 -20px 30px 5px rgba(0, 0, 0, 0.7);  /* atas */
 }
 
 .aboutme-section h2 {
@@ -311,8 +313,9 @@ html {
  padding: 20px;   /* beri jarak isi dengan border */
   border-radius: 8px; /* opsional biar lebih halus */
     border: 0.5px solid rgb(0, 0, 0);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3),
-             0 -8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+              0 20px 30px 5px rgba(0, 0, 0, 0.7),   /* bawah */
+              0 -20px 30px 5px rgba(0, 0, 0, 0.7);  /* atas */
 }
 
 .row {
@@ -351,8 +354,9 @@ border: 1px solid black;
   padding: 60px 20px;
   border-radius: 8px;
     border: 0.5px solid rgb(0, 0, 0);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3),
-             0 -8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+              0 20px 30px 5px rgba(0, 0, 0, 0.7),   /* bawah */
+              0 -20px 30px 5px rgba(0, 0, 0, 0.7);  /* atas */
 }
 
 .contact-section a {
