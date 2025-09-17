@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 document.addEventListener("DOMContentLoaded", function() {
   const sections = document.querySelectorAll(
     ".hero-section, .aboutme-section, .projects-section, .contact-section"
   );
+
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -39,6 +41,25 @@ function typeEffect() {
     }, 1000);
   }
 }
-
 window.onload = typeEffect;
+
+
+
+// tampilkan tombol jika scroll lebih dari 200px
+window.onscroll = function() {
+  const btn = document.getElementById("scrollTopBtn");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// fungsi scroll halus ke atas
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
 

@@ -437,3 +437,38 @@ color: #ffffff;
     text-align: center;
   }
 }
+
+
+/* Tombol scroll to top */
+#scrollTopBtn {
+  display: none; /* default tidak muncul */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  #scrollTopBtn {
+    font-size: 16px;
+    padding: 10px 12px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
