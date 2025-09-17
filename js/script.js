@@ -45,12 +45,11 @@ window.onload = typeEffect;
 
 
 
-
 const scrollBtn = document.getElementById("scrollTopBtn");
-const footer = document.querySelector(".footer-section"); // pastikan selector benar!
+const footer = document.querySelector(".footer-section");
 
-// tombol muncul saat scroll >200px
-window.addEventListener("scroll", function() {
+// muncul kalau scroll lebih dari 200px
+window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
     scrollBtn.style.display = "block";
   } else {
@@ -58,21 +57,21 @@ window.addEventListener("scroll", function() {
   }
 });
 
-// auto sembunyikan tombol kalau footer kelihatan
-const observer = new IntersectionObserver(entries => {
+// sembunyikan tombol kalau footer kelihatan
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      scrollBtn.style.display = "none";
+      scrollBtn.style.display = "none"; // hilang saat footer terlihat
+    } else if (window.scrollY > 200) {
+      scrollBtn.style.display = "block"; // muncul lagi kalau footer sudah hilang
     }
   });
-});
+}, { threshold: 0.1 });
+
 observer.observe(footer);
 
-// fungsi scroll halus ke atas
+// fungsi scroll ke atas
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
