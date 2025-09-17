@@ -45,20 +45,20 @@ window.onload = typeEffect;
 
 
 
-// tampilkan tombol jika scroll lebih dari 200px
+
 const scrollBtn = document.getElementById("scrollTopBtn");
-const footer = document.querySelector("footer");
+const footer = document.querySelector(".footer-section"); // pastikan selector benar!
 
 // tombol muncul saat scroll >200px
-window.onscroll = function() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 200) {
     scrollBtn.style.display = "block";
   } else {
     scrollBtn.style.display = "none";
   }
-};
+});
 
-// auto sembunyikan tombol jika footer kelihatan
+// auto sembunyikan tombol kalau footer kelihatan
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
