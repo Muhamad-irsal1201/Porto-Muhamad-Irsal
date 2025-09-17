@@ -206,7 +206,7 @@ html {
 
 /* Hero */
 .hero-section {
-  background-image: url("../img/Kartik.jpg");
+  background-color: transparent;
   background-size: cover;      /* isi penuh layar */
   background-position: center; /* fokus tengah */
   background-repeat: no-repeat;
@@ -220,6 +220,8 @@ html {
   padding-top: 70px;
  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
   margin-bottom: 10px; /* ruang buat bayangan muncul */
+  border-radius: 8px;
+  border: 1px solid white;
 }
 
 .profile-img {
@@ -253,6 +255,7 @@ html {
   background-color: transparent ; /* warna abu-abu soft */
   width: 100%;
   border-radius: 8px; /* opsional biar lebih halus */
+  border: 1px solid white;
 }
 
 .aboutme-section h2 {
@@ -304,6 +307,7 @@ html {
     background-color: transparent;
  padding: 20px;   /* beri jarak isi dengan border */
   border-radius: 8px; /* opsional biar lebih halus */
+  border: 1px solid white;
 }
 
 .row {
@@ -340,11 +344,12 @@ border: 1px solid black;
 .contact-section {
   background-color: transparent ;
   padding: 60px 20px;
-  border-radius: 12px;
+  border-radius: 8px;
+  border: 1px solid white;
 }
 
 .contact-section a {
-  color: #060606;
+  color: #ffffff;
 }
 
 .contact-section a:hover {
