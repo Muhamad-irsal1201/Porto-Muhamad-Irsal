@@ -443,7 +443,7 @@ color: #ffffff;
 #scrollTopBtn {
   display: none;
   position: fixed;
-  bottom: 20px; /* cukup rendah karena akan hilang kalau footer kelihatan */
+  bottom: 80px; /* cukup rendah karena akan hilang kalau footer kelihatan */
   right: 20px;
   z-index: 999;
   border: none;
