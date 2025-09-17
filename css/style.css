@@ -326,6 +326,14 @@ html {
 border: 1px solid black;
 }
 
+.col-md-4 .card {
+  border: 1px solid #030303;
+    background-color: transparent;
+    box-shadow: 
+               0 10px 20px rgba(0, 0, 0, 0.6),   /* shadow bawah lebih besar */
+               0 -10px 20px rgba(0, 0, 0, 0.6);  /* shadow atas lebih besar */
+}
+
 .modal-content {
   border: none;
   border-radius: 12px;
