@@ -45,33 +45,33 @@ window.onload = typeEffect;
 
 
 
-const scrollBtn = document.getElementById("scrollTopBtn");
-const footer = document.querySelector(".footer-section");
 
-// muncul kalau scroll lebih dari 200px
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-});
+ const scrollBtn = document.getElementById("scrollTopBtn");
+  const footer = document.querySelector("footer");
 
-// sembunyikan tombol kalau footer kelihatan
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      scrollBtn.style.display = "none"; // hilang saat footer terlihat
-    } else if (window.scrollY > 200) {
-      scrollBtn.style.display = "block"; // muncul lagi kalau footer sudah hilang
+  // tampilkan tombol ketika scroll ke bawah
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
     }
-  });
-}, { threshold: 0.1 });
 
-observer.observe(footer);
+    // hitung jarak footer dengan viewport
+    const footerRect = footer.getBoundingClientRect();
+    const overlap = window.innerHeight - footerRect.top;
 
-// fungsi scroll ke atas
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+    if (overlap > 0) {
+      // kalau footer mulai kelihatan → naikin tombol
+      scrollBtn.style.bottom = overlap + 20 + "px";
+    } else {
+      // kalau footer belum kelihatan → default posisi
+      scrollBtn.style.bottom = "20px";
+    }
+  };
+
+  // scroll ke atas
+  scrollBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
