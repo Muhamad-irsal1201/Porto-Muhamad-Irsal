@@ -1,7 +1,11 @@
 body {
-    background-color: #050505;
-    font-family: 'Poppins';
-     height: 100%;
+    background-image: url('../img/Bb.jpg'); /* sesuaikan dengan struktur folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -246,7 +250,7 @@ html {
 
 /* About Me */
 .aboutme-section {
-  background-color: #000000; /* warna abu-abu soft */
+  background-color: transparent ; /* warna abu-abu soft */
   width: 100%;
   border-radius: 8px; /* opsional biar lebih halus */
 }
@@ -297,7 +301,7 @@ html {
 
 /* Projects */
 #projects {
-    background-color: #ffffff;
+    background-color: transparent;
  padding: 20px;   /* beri jarak isi dengan border */
   border-radius: 8px; /* opsional biar lebih halus */
 }
@@ -334,7 +338,7 @@ border: 1px solid black;
 
 /* Contact */
 .contact-section {
-  background-color: #000000;
+  background-color: transparent ;
   padding: 60px 20px;
   border-radius: 12px;
 }
