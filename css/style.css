@@ -380,14 +380,14 @@ border: 1px solid black;
 
 .contact-form input,
 .contact-form textarea {
-  background-color: #ffffff;
+  background-color: transparent;
   border: 1px solid #000000;
-  color: #000000;
+  color: #ffffff;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #0e0d0d;
+  color: #ffffff;
   
 }
 
