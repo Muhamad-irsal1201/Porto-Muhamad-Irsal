@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: 'Poppins', sans-serif;
-   min-height: 100vh;
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -419,32 +419,21 @@ color: #ffffff;
 .footer-section {
   background-color: #fff;
   color: #000;
-  padding: 20px 0;     /* cukup tinggi agar lega */
-  margin-top: auto;    /* selalu di bawah */
-  text-align: center;  /* teks center default */
-  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2); /* biar menonjol */
+  padding: 15px 0;
 }
 
-.footer-text {
-  line-height: 1.6;
-  font-size: 16px;
+/* Mengatur teks footer */
+.footer-section .row {
+  display: flex;
+  justify-content: center; /* center horizontal */
+  align-items: center;     /* center vertical */
+  padding-top: 20px;
 }
 
-/* 📱 Responsive: atur ukuran teks & padding */
-@media (max-width: 768px) {
-  .footer-text {
-    font-size: 14px;
-  }
-  .footer-section {
-    padding: 15px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-text {
-    font-size: 13px;
-  }
-  .footer-section {
-    padding: 12px 0;
+/* Responsive tipis: teks tetap center di HP */
+@media (max-width: 767px) {
+  .footer-section .row {
+    justify-content: center;
+    text-align: center;
   }
 }
