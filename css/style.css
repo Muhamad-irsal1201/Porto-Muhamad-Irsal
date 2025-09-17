@@ -300,7 +300,7 @@ html {
 
 /* Projects */
 #projects {
-    background-color: #f00f0f;
+    background-color: #ffffff;
  padding: 20px;   /* beri jarak isi dengan border */
   border-radius: 8px; /* opsional biar lebih halus */
 }
@@ -377,7 +377,7 @@ border: 1px solid black;
 
 
 .footer-section {
-  background-color: #fff;
+  background-color: #f60303;
   color: #000;
   padding: 15px 0;
 }
